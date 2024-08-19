@@ -1,0 +1,97 @@
+/* Custom styles for EcoChiefs */
+
+.eco-gradient {
+    background: linear-gradient(90deg, #4ade80 0%, #22c55e 100%);
+}
+header {
+    position: relative; /* Ensure the gradient is positioned relative to the header */
+    background-image: url('images/bull.jpeg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Overlay gradient */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #4ade80 0%, #22c55e 100%);
+    opacity: 0.5; /* Adjust the transparency of the gradient */
+    z-index: 1;
+}
+
+/* Make sure text appears above the overlay */
+header h1, header h2, header a {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-image {
+    background-image: url(''images/bull.jpeg'');
+    background-size: cover;
+    background-position: center;
+}
+
+.nft-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.nft-card:hover {
+    transform: translateY(-5px);
+}
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card img {
+    object-fit: cover;
+    border-bottom: 2px solid var(--primary-green);
+}
+
+.roadmap-item {
+    position: relative;
+}
+
+.roadmap-item::before {
+    content: '';
+    position: absolute;
+    left: -24px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #4ade80;
+}
+
+.roadmap-item:last-child::before {
+    height: 50%;
+}
+
+.community-button {
+    transition: all 0.3s ease;
+}
+
+.community-button:hover {
+    transform: scale(1.05);
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
