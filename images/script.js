@@ -111,3 +111,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 </script>
+
+// Smooth scroll to wallet section
+document.querySelector('a[href="#wallet-section"]').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector('#wallet-section').scrollIntoView({
+        behavior: 'smooth'
+    });
+});
