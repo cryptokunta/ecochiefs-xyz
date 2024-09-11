@@ -204,3 +204,44 @@ function animatePercentage(element) {
 
     updatePercentage();
 }
+// FAQ Dropdown Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const faqDropdown = document.getElementById('faq-dropdown');
+    const faqAnswer = document.getElementById('faq-answer');
+
+    const faqContent = {
+        'how-to-buy': `
+            <p>To buy EcoChiefs tokens using SOL:</p>
+            <ol>
+                <li>Ensure you have SOL in your Solana wallet (e.g., Phantom, Solflare).</li>
+                <li>Visit our token sale page and connect your wallet.</li>
+                <li>Enter the amount of EcoChiefs tokens you want to purchase.</li>
+                <li>Confirm the transaction in your wallet.</li>
+                <li>Once confirmed, you'll receive your EcoChiefs tokens.</li>
+            </ol>
+        `,
+        'minimum-amount': `
+            <p>The minimum purchase amount is 0.1 SOL. This ensures that even smaller investors can participate in our ecosystem.</p>
+        `,
+        'fees': `
+            <p>There are no additional fees from EcoChiefs for purchasing tokens. However, you will need to pay the standard Solana network transaction fee, which is typically a fraction of a SOL.</p>
+        `,
+        'receipt-time': `
+            <p>EcoChiefs tokens are usually transferred to your wallet immediately after the Solana network confirms the transaction, which typically takes a few seconds. In rare cases of network congestion, it might take up to a few minutes.</p>
+        `,
+        'other-crypto': `
+            <p>Currently, we only accept SOL for direct purchases of EcoChiefs tokens. However, you can easily swap other cryptocurrencies for SOL on various exchanges before making your purchase.</p>
+        `
+    };
+
+    faqDropdown.addEventListener('change', function() {
+        const selectedQuestion = this.value;
+        if (selectedQuestion && faqContent[selectedQuestion]) {
+            faqAnswer.innerHTML = faqContent[selectedQuestion];
+            faqAnswer.classList.add('active');
+        } else {
+            faqAnswer.innerHTML = '';
+            faqAnswer.classList.remove('active');
+        }
+    });
+});
