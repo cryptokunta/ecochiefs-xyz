@@ -580,3 +580,56 @@ footer {
         height: 150px;
     }
 }
+.distribution-item {
+    background-color: var(--card-background);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transform: translateY(50px); /* Start below */
+    opacity: 0; /* Start invisible */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    animation: slideUpFadeIn 1s ease forwards;
+}
+
+/* Keyframes for slide-up and fade-in */
+@keyframes slideUpFadeIn {
+    0% {
+        transform: translateY(50px); /* Start lower */
+        opacity: 0; /* Invisible */
+    }
+    100% {
+        transform: translateY(0); /* End at normal position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Delay animations for each item */
+.distribution-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.distribution-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.distribution-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.distribution-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+.percentage {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.distribution-item:hover .percentage {
+    opacity: 1;
+}
+.percentage {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.distribution-item:hover .percentage {
+    opacity: 1;
+}
