@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoChiefs: Guardians of Nature</title>
+    
+    <!-- Fonts and Stylesheets -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Chart.js and AOS (for animations) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
     <nav>
         <ul>
@@ -17,7 +24,6 @@
             <li><a href="#community">Community</a></li>
         </ul>
     </nav>
-
     <header id="home">
         <div class="header-content container">
             <h1>EcoChiefs: Guardians of Nature</h1>
@@ -29,7 +35,6 @@
             <a href="#join" class="btn-primary">Become a Guardian</a>
         </div>
     </header>
-
     <main class="container">
         <section id="intro" class="section">
             <h2 class="text-nature">Empowering Digital Guardians</h2>
@@ -39,10 +44,17 @@
                 <p>EcoChiefs isn't just another digital project -- it's a groundbreaking fusion of blockchain innovation and environmental stewardship. We're pioneering a new era of conservation, where cutting-edge technology amplifies real-world impact.</p>
             </div>
         </section>
-
         <section id="avatars" class="section">
             <h2 class="text-nature">Guardian Avatars</h2>
             <p>Discover the power of our exclusive Guardian Avatars, each a unique digital entity with real-world impact.</p>
+            <section id="banners" class="section">
+                <div class="container">
+                    <div class="banner">
+                        <img src="/Users/test/Downloads/ecochiefs-xyz-live/images/WhatsApp Image 2024-08-19 at 19.36.47.jpeg" alt="EcoChiefs Bannr">
+                    </div>
+        
+                </div>
+            </section>
             <div class="avatar-grid">
                 <div class="avatar-card">
                     <img src="images/WhatsApp Image 2024-08-19 at 19.36.46 (1).jpeg" alt="Bull Avatar">
@@ -50,7 +62,7 @@
                     <p>Strength & Leadership</p>
                 </div>
                 <div class="avatar-card">
-                    <img src="images/Bear.png" alt="Bear Avatar">
+                    <img src="images/Rocky.jpg" alt="Bear Avatar">
                     <h3>The Bear</h3>
                     <p>Wisdom & Protection</p>
                 </div>
@@ -75,7 +87,13 @@
                 </ul>
             </div>
         </section>
-
+        <div class="video-container">
+            <video width="100%" controls autoplay muted loop id="background-video">
+                <source src="images/Taurus ecochiefs short.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        </section>
         <section id="tokens" class="section">
             <h2 class="text-nature">EcoToken: Fueling the Green Revolution</h2>
             <p>EcoToken is the lifeblood of the EcoChiefs ecosystem, powering conservation efforts and rewarding Guardians.</p>
@@ -110,11 +128,30 @@
                             window.location.href = 'learn-more.html';
                         });
                     </script>
-                    
                 </div>
             </div>
-        </section>
-
+            <section id="roadmap" class="section">
+                    <h2 class="text-nature">Roadmap to a Greener Future</h2>
+                    <div class="roadmap-container">
+                        <div class="roadmap-line"></div>
+                        <div class="roadmap-progress"></div>
+                        <div class="roadmap-item" data-phase="1">
+                            <h3>Phase 1: Genesis</h3>
+                            <p>Launch of EcoChiefs platform and initial Guardian NFT release</p>
+                        </div>
+                        <div class="roadmap-item" data-phase="2">
+                            <h3>Phase 2: Growth</h3>
+                            <p>Expansion of Guardian abilities and first major conservation project funding</p>
+                        </div>
+                        <div class="roadmap-item" data-phase="3">
+                            <h3>Phase 3: Bloom</h3>
+                            <p>Introduction of EcoToken and decentralized governance model</p>
+                        </div>
+                        <div class="roadmap-item" data-phase="4">
+                            <h3>Phase 4: Harmony</h3>
+                            <p>Global expansion and integration with major environmental initiatives</p>
+                        </div>
+                    </div>
         <section id="community" class="section">
             <h2 class="text-nature">Join Our Elite Community</h2>
             <p>Becoming part of the EcoChiefs community means joining a select group of visionaries and changemakers. Together, we're not just making a difference -- we're redefining what's possible in the realm of digital conservation.</p>
@@ -158,7 +195,8 @@
         <p>© 2024 EcoChiefs. All rights reserved. Together, we guard nature's future.</p>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script> <!-- Make sure script.js is properly linked -->
 </body>
 </html>
