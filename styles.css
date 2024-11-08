@@ -26,7 +26,11 @@ body {
 nav {
     background-color: var(--secondary-color);
     padding: 15px 0;
+<<<<<<< HEAD
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+=======
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+>>>>>>> b18392b (Initial commit with updated website version)
 }
 
 nav ul {
@@ -66,12 +70,20 @@ header {
     margin-bottom: 20px;
     color: var(--text-color);
     font-size: 2.5em;
+<<<<<<< HEAD
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+=======
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+>>>>>>> b18392b (Initial commit with updated website version)
 }
 
 .header-content h2 {
     margin-top: 20px;
+<<<<<<< HEAD
     color: #C8E6C9;
+=======
+    color: #C8E6C9; /* This is a lighter green, you can add this to root if needed */
+>>>>>>> b18392b (Initial commit with updated website version)
     font-size: 1.5em;
 }
 
@@ -106,7 +118,11 @@ header {
 
 .btn-primary:hover, .btn-secondary:hover {
     transform: translateY(-3px);
+<<<<<<< HEAD
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+=======
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+>>>>>>> b18392b (Initial commit with updated website version)
 }
 
 /* Sections */
@@ -128,22 +144,55 @@ header {
     border-radius: 10px;
     padding: 30px;
     margin-top: 30px;
+<<<<<<< HEAD
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 /* Avatar Grid */
 .avatar-grid {
+=======
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #2E7D32;
+    --accent-color: #FFEB3B;
+    --background-color: #1A2A3A;
+    --text-color: #ECF0F1;
+    --card-background: rgba(76, 175, 80, 0.1);
+   
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .avatar-grid {
+>>>>>>> b18392b (Initial commit with updated website version)
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     margin-top: 30px;
+<<<<<<< HEAD
 }
 
 .avatar-card {
+=======
+  }
+  
+  .avatar-card {
+>>>>>>> b18392b (Initial commit with updated website version)
     background-color: var(--card-background);
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+<<<<<<< HEAD
     border: 4px solid #FFEB3B
 }
 
@@ -153,10 +202,24 @@ header {
 }
 
 .avatar-card img {
+=======
+    border: 4px solid var(--accent-color);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .avatar-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  
+  .avatar-card img {
+>>>>>>> b18392b (Initial commit with updated website version)
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
+<<<<<<< HEAD
 }
 
 .avatar-card h3 {
@@ -477,6 +540,61 @@ header {
     margin-top: 5px;
     font-size: 0.9em;
 }
+=======
+  }
+  
+  .avatar-card h3 {
+    margin: 15px 0 5px;
+    font-size: 1.2em;
+    color: var(--primary-color);
+    text-align: center;
+  }
+  
+  .avatar-card p {
+    margin: 0 0 10px;
+    font-size: 0.9em;
+    text-align: center;
+  }
+  
+  .marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-top: auto;
+  }
+  
+  .marquee {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 20s linear infinite;
+  }
+  
+  .bull-text { color: var(--bull-color); }
+  .bear-text { color: var(--bear-color); }
+  .fox-text { color: var(--fox-color); }
+  .gorilla-text { color: var(--gorilla-color); }
+  
+  @keyframes marquee {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .avatar-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .avatar-card img {
+      height: 150px;
+    }
+  }
+  
+>>>>>>> b18392b (Initial commit with updated website version)
 
 /* Token Distribution */
 .token-distribution {
@@ -501,7 +619,11 @@ header {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+<<<<<<< HEAD
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+=======
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+>>>>>>> b18392b (Initial commit with updated website version)
     transition: transform 0.3s ease;
 }
 
@@ -533,7 +655,11 @@ header {
     display: inline-block;
     padding: 10px 20px;
     color: var(--text-color);
+<<<<<<< HEAD
     background-color: #03A9F4;
+=======
+    background-color: #03A9F4; /* You can add a new blue color to the root */
+>>>>>>> b18392b (Initial commit with updated website version)
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
@@ -541,9 +667,15 @@ header {
 }
 
 .social-links a:hover {
+<<<<<<< HEAD
     background-color: #0288D1;
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+=======
+    background-color: #0288D1; /* Another shade of blue */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+>>>>>>> b18392b (Initial commit with updated website version)
 }
 
 /* Wallet Address */
@@ -573,6 +705,7 @@ footer {
         flex-direction: column;
         align-items: center;
     }
+<<<<<<< HEAD
     
     nav ul li {
         margin: 10px 0;
@@ -590,10 +723,30 @@ footer {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
     
+=======
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .header-content h1 {
+        font-size: 2em;
+    }
+
+    .header-content h2 {
+        font-size: 1.2em;
+    }
+
+    .avatar-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+>>>>>>> b18392b (Initial commit with updated website version)
     .avatar-card img {
         height: 150px;
     }
 }
+<<<<<<< HEAD
 .distribution-item {
     background-color: var(--card-background);
     padding: 20px;
@@ -839,3 +992,5 @@ footer {
 .roadmap-item p {
     color: #d0d0d0;
 }
+=======
+>>>>>>> b18392b (Initial commit with updated website version)
