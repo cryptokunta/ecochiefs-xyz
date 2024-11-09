@@ -1,0 +1,120 @@
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #2E7D32;
+    --accent-color: #FFEB3B;
+    --background-color: #1A2A3A;
+    --text-color: #ECF0F1;
+    --card-background: rgba(76, 175, 80, 0.1);
+}
+
+#roadmap {
+    padding: 50px 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.roadmap-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.roadmap-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--secondary-color);
+    transform: translateX(-50%); /* Ensures the line is centered */
+}
+
+.roadmap-progress {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    background-color: var(--accent-color);
+    transform: translateX(-50%); /* Centers the progress line */
+    transition: height 0.5s ease-in-out;
+}
+
+.roadmap-item {
+    position: relative;
+    margin-bottom: 60px; /* Increased spacing */
+    padding: 20px;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    width: calc(50% - 30px); /* Adjusts the item width */
+    transition: all 0.3s ease-in-out;
+}
+
+.roadmap-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.roadmap-item:nth-child(odd) {
+    margin-left: auto;
+}
+
+.roadmap-item:nth-child(odd)::before {
+    left: -40px;
+}
+
+.roadmap-item:nth-child(even)::before {
+    right: -40px;
+}
+
+.roadmap-item.active {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.roadmap-item.active::before {
+    background-color: var(--accent-color);
+    transform: scale(1.2);
+}
+
+.roadmap-item h3 {
+    margin-top: 0;
+    color: var(--accent-color);
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.roadmap-item p {
+    margin-bottom: 0;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.roadmap-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .roadmap-item {
+        width: calc(100% - 40px);
+        margin-left: 40px !important;
+        margin-right: 0 !important;
+    }
+
+    .roadmap-line, .roadmap-progress {
+        left: 20px;
+        transform: none; /* No centering adjustment needed for smaller screens */
+    }
+
+    .roadmap-item::before {
+        left: -30px !important;
+    }
+}
